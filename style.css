@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #00131f;
+  color: #00b6a7;
+  overflow-x: hidden;
+  font-family: monospace;
+}
+
+.glass-wrapper {
+  width: 90%;
+  max-width: 525%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 6px double #6cd4ff;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #6cd4ff33;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  color: #1694e9;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+  .phone {
+    width: 250px;
+    margin-top: 50px;
+    float: right;
+  }
+
+  .title{
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #6cd4ff;
+    margin-left: 0;       
+    padding-left: 10;     
+  }
+
+  #ttl::after {
+    content: '|';
+    animation: blink 1s infinite;
+    margin-left: 5px;
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+
+  .main-content {
+    text-align: right;
+    padding: 2rem 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    
+
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #df7a07;
+    color: rgb(1, 41, 41);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .cta-button:hover {
+    background-color: #4fc055c9;
+      transform: scale(1.05);
+  }
+
+
+  
+  .features ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* aligns all items to the right */
+  }
+  
+  .features li {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: typeIn 0.5s forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #097579;
+  }
+  
+  .features li:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  .features li:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .features li:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  .features li:nth-child(4) {
+    animation-delay: 2s;
+  }
+  .features li:nth-child(5) {
+    animation-delay: 2.5s;
+  }
+
+  .features li {
+    border-right: 2px solid #6cd4ff;
+    padding-right: 10px;
+    font-family: monospace;
+  }
+  
+
+  @keyframes typeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      width: 100%;
+    }
+  }
+
+  
